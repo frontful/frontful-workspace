@@ -15,5 +15,10 @@
     "platforms/*/packages/*",
     "packages/*",
     "projects/*"
-  ]
+  ],
+  "devDependencies": {
+    "mobx": "^4.x",
+    "react": "^16.x",
+    "react-dom": "16.x"
+  }
 }
