@@ -20,7 +20,8 @@
     "packages": [
       "platforms/*/packages/*",
       "platforms/*",
-      "projects/*"
+      "projects/*",
+      "templates/template-project"
     ]
   },
   "dependencies": {

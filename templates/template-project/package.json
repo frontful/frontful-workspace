@@ -1,0 +1,63 @@
+{
+  "name": "TEMPLATE-project",
+  "version": "1.0.0",
+  "description": "TEMPLATE project",
+  "private": true,
+  "frontful": {
+    "config": "./config/config.development.js",
+    "environment": {
+      "memory": false,
+      "server": {
+        "port": 8000
+      }
+    },
+    "common": {
+      "packages": [],
+      "alias": {}
+    }
+  },
+  "scripts": {
+    "build": "yarn test && frontful-environment build",
+    "clean": "frontful-tools clean",
+    "install": "frontful-tools install",
+    "start": "frontful-environment start",
+    "start:build": "yarn build && cross-env PORT=8000 node ./build/server",
+    "test": "yarn test:eslint",
+    "test:eslint": "eslint --ext .jsx,.js --max-warnings 0 .",
+    "tools": "frontful-tools"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontful/TEMPLATE-project.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Arturs Girons <arturs.girons@gmail.com> (https://artursgirons.info/)"
+  ],
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "frontful-config": "4.x",
+    "frontful-dao": "4.x",
+    "frontful-environment": "4.x",
+    "frontful-model": "4.x",
+    "frontful-resolver": "4.x",
+    "frontful-router": "4.x",
+    "frontful-store-sql": "4.x",
+    "frontful-style": "4.x",
+    "mobx": "4.x",
+    "normalize.css": "^8.0.1",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "sequelize": "^4.42.0",
+    "tedious": "^3.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "frontful-tools": "4.x"
+  }
+}
