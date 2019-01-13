@@ -1,10 +1,12 @@
 {
   "name": "frontful-workspace",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "private": true,
   "description": "Frontful workspace",
-  "engines": {
-    "node": ">=8.11.3"
+  "scripts": {
+    "clean": "frontful-tools clean '{projects/*,platforms/*/packages/*,platforms/*}/' && frontful-tools clean",
+    "install": "frontful-tools install",
+    "tools": "frontful-tools"
   },
   "repository": {
     "type": "git",
@@ -14,17 +16,14 @@
   "contributors": [
     "Arturs Girons <arturs.girons@gmail.com> (https://artursgirons.info/)"
   ],
-  "workspaces": [
-    "platforms/*/packages/*",
-    "packages/*",
-    "projects/*"
-  ],
-  "devDependencies": {
-    "frontful-model": "3.x",
-    "frontful-resolver": "3.x",
-    "frontful-style": "3.x",
-    "mobx": "^4.x",
-    "react": "^16.x",
-    "react-dom": "16.x"
+  "workspaces": {
+    "packages": [
+      "platforms/*",
+      "platforms/*/packages/*",
+      "projects/*"
+    ]
+  },
+  "dependencies": {
+    "frontful-tools": "4.x"
   }
 }
