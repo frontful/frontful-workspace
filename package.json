@@ -4,7 +4,7 @@
   "private": true,
   "description": "Frontful workspace",
   "scripts": {
-    "clean": "frontful-tools clean '{projects/*,platforms/*/packages/*,platforms/*}/' && frontful-tools clean",
+    "clean": "frontful-tools clean \"{projects/*,platforms/*/packages/*,platforms/*}/\" && frontful-tools clean",
     "install": "frontful-tools install",
     "tools": "frontful-tools"
   },
@@ -18,8 +18,8 @@
   ],
   "workspaces": {
     "packages": [
-      "platforms/*",
       "platforms/*/packages/*",
+      "platforms/*",
       "projects/*"
     ]
   },
