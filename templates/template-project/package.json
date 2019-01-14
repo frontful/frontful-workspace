@@ -52,9 +52,7 @@
     "mobx": "4.x",
     "normalize.css": "^8.0.1",
     "react": "16.x",
-    "react-dom": "16.x",
-    "sequelize": "^4.42.0",
-    "tedious": "^3.0.1"
+    "react-dom": "16.x"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
