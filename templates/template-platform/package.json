@@ -1,8 +1,8 @@
 {
-  "name": "@TEMPLATE/platform",
+  "name": "@frontful/template-platform",
   "version": "1.0.0",
   "private": true,
-  "description": "@TEMPLATE platform",
+  "description": "Template platform",
   "scripts": {
     "build": "yarn test && frontful-tools build \"packages/*/\"",
     "clean": "frontful-tools clean \"packages/*/\" && frontful-tools clean",

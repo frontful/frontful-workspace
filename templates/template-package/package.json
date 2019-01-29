@@ -1,8 +1,8 @@
 {
-  "name": "@TEMPLATE/package",
+  "name": "@frontful/template-package",
   "version": "1.0.0",
   "private": true,
-  "description": "TEMPLATE package",
+  "description": "Template package",
   "main": "./common/index.js",
   "scripts": {
     "build": "yarn test && frontful-tools build",

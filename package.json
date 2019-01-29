@@ -21,7 +21,8 @@
       "platforms/*/packages/*",
       "platforms/*",
       "projects/*",
-      "templates/template-project"
+      "templates/template-project",
+      "templates/template-project-agnostic"
     ]
   },
   "dependencies": {

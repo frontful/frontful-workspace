@@ -1,5 +1,5 @@
 {
-  "name": "template-project-agnostic",
+  "name": "@frontful/template-project-agnostic",
   "version": "1.0.0",
   "description": "Template project (agnostic)",
   "private": true,
@@ -19,6 +19,10 @@
     "start:build": "yarn build && cross-env PORT=8000 node ./build/server",
     "test": "yarn test:eslint",
     "test:eslint": "eslint --ext .jsx,.js --max-warnings 0 .",
+    "stats": "yarn stats:build",
+    "stats:build": "yarn build && yarn stats:build:server && yarn stats:build:browser",
+    "stats:build:browser": "webpack-bundle-analyzer ./stats/build/browser.json ./build/browser/assets --no-open --mode static --report ./stats/build/browser.html",
+    "stats:build:server": "webpack-bundle-analyzer ./stats/build/server.json ./build/browser/assets --no-open --mode static --report ./stats/build/server.html",
     "tools": "frontful-tools"
   },
   "license": "MIT",
@@ -34,6 +38,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
-    "frontful-tools": "4.x"
+    "frontful-tools": "4.x",
+    "webpack-bundle-analyzer": "^3.0.3"
   }
 }
