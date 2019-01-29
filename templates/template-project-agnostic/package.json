@@ -1,0 +1,39 @@
+{
+  "name": "template-project-agnostic",
+  "version": "1.0.0",
+  "description": "Template project (agnostic)",
+  "private": true,
+  "frontful": {
+    "environment": {
+      "memory": false,
+      "server": {
+        "port": 8000
+      }
+    }
+  },
+  "scripts": {
+    "build": "yarn test && frontful-environment build",
+    "clean": "frontful-tools clean",
+    "install": "frontful-tools install",
+    "start": "frontful-environment start",
+    "start:build": "yarn build && cross-env PORT=8000 node ./build/server",
+    "test": "yarn test:eslint",
+    "test:eslint": "eslint --ext .jsx,.js --max-warnings 0 .",
+    "tools": "frontful-tools"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Arturs Girons <arturs.girons@gmail.com> (https://artursgirons.info/)"
+  ],
+  "dependencies": {
+    "express": "^4.15.2",
+    "frontful-environment": "4.x",
+    "normalize.css": "^8.0.1",
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "frontful-tools": "4.x"
+  }
+}
